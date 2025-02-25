@@ -1,4 +1,4 @@
-import * as objectAssign from "object-assign";
+const objectAssign = require("object-assign");
 
 export function updateObject<T, U>(oldObject: T, newValues: U): T {
     return objectAssign({}, oldObject, newValues);

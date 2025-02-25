@@ -1,5 +1,5 @@
-import * as URI from "urijs";
 import * as Store from "../store";
+const URI = require("urijs");
 
 export function searchParameterValidator(parameters: Store.SearchParameters): void {
     // todo validate params

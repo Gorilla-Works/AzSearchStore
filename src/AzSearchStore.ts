@@ -1,4 +1,4 @@
-import * as redux from "redux";
+import { Store as ReduxStore, createStore, applyMiddleware } from "redux";
 import ReduxThunk from "redux-thunk";
 import { reducers } from "./reducers/reducers";
 import * as asyncActions from "./actions/asyncActions";
@@ -14,12 +14,12 @@ import * as Store from "./store";
 export { asyncActions, configActions, searchParameterActions, suggestionsParameterActions, inputActions, facetsActions, suggestionsActions, resultsActions, Store };
 
 export class AzSearchStore {
-    public store: redux.Store<Store.SearchState>;
+    public store: ReduxStore<Store.SearchState>;
     constructor() {
-        this.store = redux.createStore(
+        this.store = createStore(
             reducers,
             {} as Store.SearchState,
-            redux.applyMiddleware(ReduxThunk)
+            applyMiddleware(ReduxThunk)
         );
     }
 
