@@ -1,4 +1,4 @@
-import * as URI from "urijs";
+var URI = require("urijs");
 export function searchParameterValidator(parameters) {
     // todo validate params
 }

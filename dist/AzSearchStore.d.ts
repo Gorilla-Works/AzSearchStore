@@ -1,4 +1,4 @@
-import * as redux from "redux";
+import { Store as ReduxStore } from "redux";
 import * as asyncActions from "./actions/asyncActions";
 import * as configActions from "./actions/configActions";
 import * as searchParameterActions from "./actions/searchParametersActions";
@@ -10,7 +10,7 @@ import * as resultsActions from "./actions/resultsActions";
 import * as Store from "./store";
 export { asyncActions, configActions, searchParameterActions, suggestionsParameterActions, inputActions, facetsActions, suggestionsActions, resultsActions, Store };
 export declare class AzSearchStore {
-    store: redux.Store<Store.SearchState>;
+    store: ReduxStore<Store.SearchState>;
     constructor();
     subscribe(listener: () => void): void;
     getState(): Store.SearchState;

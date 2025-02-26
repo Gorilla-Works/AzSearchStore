@@ -2,13 +2,13 @@ import * as Store from "../store";
 import * as resultsActions from "./resultsActions";
 import * as suggestionsActions from "./suggestionsActions";
 import * as facetsActions from "./facetsActions";
-import * as promise from "es6-promise";
+import { polyfill as promisePolyfill } from "es6-promise";
 import "isomorphic-fetch";
 import { buildSearchURI, buildSuggestionsURI, buildPostBody, suggestParameterValidator, searchParameterValidator } from "../utils/uriHelper";
 // todo this should probably be at the entry point of app
-promise.polyfill();
+promisePolyfill();
 import thunk, { ThunkAction } from "redux-thunk";
-import { Action } from 'redux';
+import { Action } from "redux";
 
 const userAgent = "AzSearchStore/Preview";
 
