@@ -42,7 +42,8 @@
     "ts-lint": "^4.5.1",
     "ts-loader": "^6.2.1",
     "typescript": "^3.7.5",
-    "webpack": "^4.41.6"
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11"
   },
   "dependencies": {
     "es6-promise": "^4.2.8",
@@ -50,8 +51,7 @@
     "object-assign": "^4.1.1",
     "redux": "^4.0.5",
     "redux-thunk": "~2.3.0",
-    "urijs": "^1.18.5",
-    "webpack-cli": "^3.3.11"
+    "urijs": "^1.18.5"
   },
   "peerDependencies": {
     "redux": "^4.0.5"
